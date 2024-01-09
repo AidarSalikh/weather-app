@@ -1,38 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(82, 81, 80);
+    /* background-color: rgb(156, 216, 226); */
+    background-image: url('/src/assets/sunny-day.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ////////////////////////// */
+
+.weatherTop {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.minMaxTemp {
+    display: flex;
+    gap: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weatherTop h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+.weatherTop h1::after {
+    content: "\00b0";
 }
 
-.App-link {
-  color: #61dafb;
+.weatherTop h3 {
+    font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* /////////////////////// */
+
+.carouselContainer {
+    background-color: rgb(227, 236, 247);
+    width: 80vw;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+.cardElements {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ///////////////////// */
+
+
+.weeklyContainer {
+    background-color: rgb(227, 236, 247);
+    width: 80vw;
+    border-radius: 1rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.weeklyTable {
+    margin: 1rem 2rem;
+
+}
+
+.dayForecast {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+.dayForecast{
+    border-bottom: 0.1rem solid rgb(52, 210, 221);
+    margin-bottom: 1rem;
+}
+
+
+/* /////////////////// */
+
+.inputField {
+    opacity: 5;
+    border: none;
+    background-color: #00ffff00;
+}
+
+.inputField:focus {
+    border: none;
 }
